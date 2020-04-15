@@ -18,6 +18,25 @@
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.css" rel="stylesheet">
 
+
+  <script type="text/javascript">
+    function validar() {
+        var usuario = document.getElementById("exampleInputEmail").value;
+        var password = document.getElementById("exampleInputPassword").value;
+
+        if(usuario=="Diego" && password=="123")
+        {
+            alert("Bienvendo, Diego")
+            document.location.href = "index.html";
+        }
+        else
+        {
+            alert("Correo o contraseña no válidos");
+        }
+    }
+  </script>
+
+
 </head>
 
 <body class="bg-gradient-primary">
@@ -41,20 +60,26 @@
                   </div>
                   <form class="user">
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Correo electrónico">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Contraseña">
                     </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small">
                         <input type="checkbox" class="custom-control-input" id="customCheck">
-                        <label class="custom-control-label" for="customCheck">Remember Me</label>
+                        <label class="custom-control-label" for="customCheck">Recordar credenciales</label>
                       </div>
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
-                      Login
-                    </a>
+                    <!-- <a href="index.html" class="btn btn-primary btn-user btn-block">
+                      Iniciar sesión
+                    </a> -->
+
+
+                    <input type="Button" onclick="validar()" value="Iniciar sesión" class="btn btn-primary btn-user btn-block"
+
+                    >
+
                     <hr>
                     <a href="index.html" class="btn btn-google btn-user btn-block">
                       <i class="fab fa-google fa-fw"></i> Login with Google
@@ -91,6 +116,14 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.js"></script>
+
+  <script>function alerta()
+  {
+      alert("Hola mundo");
+  }
+  </script>
+
+  <input type="Button" onclick="alerta()" value="Hola mundo" class="btn btn-primary btn-user btn-block">
 
 </body>
 
